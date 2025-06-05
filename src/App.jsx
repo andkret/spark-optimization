@@ -14,20 +14,21 @@ import JoinPreview from './components/JoinPreview';
 import { generateCode } from './codegen';
 import { simulatePerformance, scoreRun } from './simulator';
 import './style.css';
+import academyImage from './assets/LDE-Logo.png';
 
 export default function App() {
   // ─── Configuration State ───
   const [config, setConfig] = useState({
-    clusterSize: 'Medium',
+    clusterSize: 'Large',
     datasetSize: 'Medium',
-    partitionStrategy: 'Good',
+    partitionStrategy: 'None',
     fileFormat: 'Parquet',
     joinPrimary: 'Orders',
     joinSecondary: 'Customers',
     joinKey: 'customer_id',
-    joinType: 'Broadcast',
-    useCache: true,
-    aqeEnabled: true,
+    joinType: 'Shuffle',
+    useCache: false,
+    aqeEnabled: false,
     skewed: false,
     skewKey: 'region_id',
   });
@@ -60,7 +61,19 @@ export default function App() {
     <div className="app-container">
       {/* ─── Left Sidebar (core controls only) ─── */}
       <div className="left-panel">
+        <div className="academy-section" style={{ marginBottom: '16px', textAlign: 'left' }}>
+            <h4>Check out our Academy & Coaching at:</h4>
+            <a href="https://learndataengineering.com" target="_blank" rel="noopener noreferrer">
+              <img
+                src={academyImage}
+                alt="Academy and Coaching"
+                style={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </a>
+          </div>
         <div className="panel">
+          {/* Academy Promotion Section */}
+          
           <h2>Configuration</h2>
           <LevelSelector
             onSelectLevel={(level) => {
