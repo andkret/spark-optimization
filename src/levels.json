@@ -1,0 +1,48 @@
+[
+  {
+    "id": "level_1",
+    "title": "CSV Chaos",
+    "description": "The query is slow. Try switching file format to Parquet, enable caching, and use good partitioning.",
+    "startConfig": {
+      "clusterSize": "Medium",
+      "datasetSize": "Medium",
+      "partitionStrategy": "None",
+      "fileFormat": "CSV",
+      "joinPrimary": "Orders",
+      "joinSecondary": "Customers",
+      "joinKey": "customer_id",
+      "joinType": "Shuffle",
+      "useCache": false,
+      "aqeEnabled": false,
+      "skewed": false,
+      "skewKey": "region_id"
+    },
+    "goals": {
+      "maxTime": 70,
+      "requiredFixes": ["fileFormat", "useCache", "partitionStrategy"]
+    }
+  },
+  {
+    "id": "level_2",
+    "title": "Skewed Joins",
+    "description": "Most orders come from region 10. The join takes forever. Use AQE and good partitioning.",
+      "startConfig": {
+      "clusterSize": "Medium",
+      "datasetSize": "Large",
+      "partitionStrategy": "Bad",
+      "fileFormat": "Parquet",
+      "joinPrimary": "Orders",
+      "joinSecondary": "Customers",
+      "joinKey": "customer_id",
+      "joinType": "Shuffle",
+      "useCache": false,
+      "aqeEnabled": false,
+      "skewed": true,
+      "skewKey": "region_id"
+    },
+    "goals": {
+      "fixSkew": true,
+      "enableAQE": true
+    }
+  }
+]
