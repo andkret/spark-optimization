@@ -2,7 +2,7 @@
   "name": "spark-optimization",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andkret.github.io/spark-optimization/",
+  "homepage": "https://andkret.github.io/spark-optimization",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
