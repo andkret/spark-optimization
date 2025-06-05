@@ -1,6 +1,6 @@
 {
-  "name": "spark-simulator",
-  "version": "1.0.0",
+  "name": "spark-optimization",
+  "version": "0.1.0",
   "private": true,
   "homepage": "https://andkret.github.io/spark-optimization/",
   "scripts": {
@@ -8,16 +8,16 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.4.6",
+    "@tippyjs/react": "^4.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reactflow": "^11.2.0",
     "recharts": "^2.6.2",
-    "tippy.js": "^6.3.1",
-    "@tippyjs/react": "^4.2.5",
-    "@monaco-editor/react": "^4.4.6"
+    "tippy.js": "^6.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
