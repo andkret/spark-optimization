@@ -88,7 +88,29 @@ export default function App() {
           />
           <Sidebar config={config} setConfig={setConfig} />
         </div>
+        {/* Further Tasks / Ideas Panel */}
+        <div className="panel" style={{ marginTop: '16px' }}>
+          <h2>Further Tasks & Ideas</h2>
+          <ul style={{ paddingLeft: '1.2em' }}>
+            <li>More interactive help and explanations</li>
+            <li>Challenges for the learner to solve (games)</li>
+            <li>Better CPU and Memory simulation</li>
+            <li>Better Skew simulation</li>
+          </ul>
+        </div>
+      
+        {/* Feedback Panel */}
+        <div className="panel" style={{ marginTop: '16px' }}>
+          <h2>Feedback</h2>
+          <p>
+            Send us your feedback about the playground:&nbsp;
+            <a href="https://forms.gle/m3kTRyWkCwoxfyxa8" target="_blank" rel="noopener noreferrer" style={{ color: '#f6bc52', textDecoration: 'underline' }}>
+              Submit feedback
+            </a>
+          </p>
+        </div>
       </div>
+      
 
       {/* ─── Center Panel: Tabs ─── */}
       <div className="center-panel">
