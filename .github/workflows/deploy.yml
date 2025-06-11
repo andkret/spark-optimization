@@ -27,3 +27,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+      - name: ✅ Deployment complete – Print URL
+        run: echo "🔗 Site deployed at: https://andkret.github.io/spark-optimization/"
