@@ -19,8 +19,8 @@ import academyImage from './assets/LDE-Logo.png';
 export default function App() {
   // ─── Configuration State ───
   const [config, setConfig] = useState({
-    clusterSize: 'Large',
-    datasetSize: 'Medium',
+    clusterSize: 'Small',
+    datasetSize: 'Small',
     partitionStrategy: 'None',
     fileFormat: 'Parquet',
     joinPrimary: 'Orders',
