@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "vite build && gh-pages -d dist --no-clean && git checkout main"
+    "deploy": "vite build && gh-pages -d dist -git && git checkout main"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.4.6",
