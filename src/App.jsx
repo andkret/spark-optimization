@@ -62,7 +62,8 @@ export default function App() {
       {/* ─── Left Sidebar (core controls only) ─── */}
       <div className="left-panel">
         <div className="academy-section" style={{ marginBottom: '16px', textAlign: 'left' }}>
-            <h4>Check out our Academy & Coaching at:</h4>
+            <h4>Check out our Academy & Coaching</h4>
+            <h4>30% Summer Sale at:</h4>
             <a href="https://learndataengineering.com" target="_blank" rel="noopener noreferrer">
               <img
                 src={academyImage}
@@ -103,7 +104,7 @@ export default function App() {
         <div className="panel" style={{ marginTop: '16px' }}>
           <h2>Feedback</h2>
           <p>
-            Send us your feedback about the playground:&nbsp;
+            Send us your feedback and ideas about the playground:&nbsp;
             <a href="https://forms.gle/m3kTRyWkCwoxfyxa8" target="_blank" rel="noopener noreferrer" style={{ color: '#f6bc52', textDecoration: 'underline' }}>
               Submit feedback
             </a>
