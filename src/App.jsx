@@ -62,8 +62,7 @@ export default function App() {
       {/* ─── Left Sidebar (core controls only) ─── */}
       <div className="left-panel">
         <div className="academy-section" style={{ marginBottom: '16px', textAlign: 'left' }}>
-            <h4>Check out our Academy & Coaching</h4>
-            <h4>30% Summer Sale at</h4>
+            <h4>Check out our Academy & Coaching at:</h4>
             <a href="https://learndataengineering.com" target="_blank" rel="noopener noreferrer">
               <img
                 src={academyImage}
